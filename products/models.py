@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.urls import reverse
 from versatileimagefield.fields import VersatileImageField
 
+
 class Category(models.Model):
     """ Category model """
 
@@ -26,7 +27,8 @@ class Category(models.Model):
         null=False,
     )
 
-    category = models.SlugField(verbose_name="Category", editable=False, unique=True)
+    category = models.SlugField(
+        verbose_name="Category", editable=False, unique=True)
     name = models.CharField(
         verbose_name="Category Name",
         max_length=128,
@@ -61,7 +63,7 @@ class Product(models.Model):
     image = VersatileImageField(
         verbose_name="Image",
         default="",
-        upload_to="media/images/products/",
+        upload_to="images/products/",
         null=False,
         blank=False,
         help_text="Size: 1280px/720px, png or jpeg format",
@@ -83,7 +85,8 @@ class Product(models.Model):
     price = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, blank=False, help_text="Price"
     )
-    quantity = models.IntegerField(null=False, blank=False, help_text="Quantity")
+    quantity = models.IntegerField(
+        null=False, blank=False, help_text="Quantity")
     category = models.ForeignKey(
         Category,
         verbose_name="Category",

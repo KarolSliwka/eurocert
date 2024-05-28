@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-4 px-3">
+    <h2>Categories List</h2>
+    <table class="table table-striped mt-5">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Visible</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in categories %}
+            <tr>
+                <td>{{ category.name }}</td>
+                <td>{{ category.visible }}</td>
+                <td>
+                    <a href="{% url 'category_edit' category.id %}" class="btn btn-apply mt-0 me-3">Edit</a>
+                    <a href="{% url 'category_delete' category.id %}" class="btn btn-apply mt-0">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'category_add' %}" class="btn btn-success">Add New Category</a>
+</div>
+{% endblock %}

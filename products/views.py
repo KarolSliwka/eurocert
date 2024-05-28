@@ -11,7 +11,7 @@ from rest_framework import status
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.pagination import PageNumberPagination
 from django.shortcuts import render, get_object_or_404, redirect
-from .forms import ProductForm
+from .forms import ProductForm, CategoryForm
 
 
 class ProductViewSet(viewsets.ModelViewSet):
@@ -71,6 +71,7 @@ def products_detail(request, pk, format=None):
         return Response(status == status.HTTP_204_NO_CONTENT)
 
 
+# Products
 def product_list(request):
     category_id = request.GET.get('category')
     if category_id:
@@ -136,6 +137,69 @@ def product_delete(request, pk):
     template = 'products/product_confirm_delete.html'
     context = {
         'product': product
+    }
+
+    return render(request, template, context)
+
+
+# Categories
+def categories_list(request):
+    categories = Category.objects.all()
+
+    template = 'categories/categories_list.html'
+    context = {
+        'categories': categories,
+    }
+
+    return render(request, template, context)
+
+
+def category_add(request):
+    if request.method == "POST":
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('categories_list')
+    else:
+        form = CategoryForm()
+
+    template = 'categories/category_form.html'
+    context = {
+        'form': form,
+        'form_title': 'Add New Category'
+    }
+
+    return render(request, template, context)
+
+
+def category_edit(request, pk):
+    category = get_object_or_404(Category, pk=pk)
+    if request.method == "POST":
+        form = CategoryForm(request.POST, request.FILES, instance=category)
+        if form.is_valid():
+            form.save()
+            return redirect('categories_list')
+    else:
+        form = CategoryForm(instance=category)
+
+    template = 'categories/category_form.html'
+    context = {
+        'form': form,
+        'form_title': 'Edit Category'
+    }
+
+    return render(request, template, context)
+
+
+def category_delete(request, pk):
+    category = get_object_or_404(Category, pk=pk)
+    if request.method == "POST":
+        category.delete()
+        return redirect('categories_list')
+
+    template = 'categories/category_confirm_delete.html'
+    context = {
+        'category': category
     }
 
     return render(request, template, context)
