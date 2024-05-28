@@ -1,0 +1,80 @@
+// body color
+$body-background-color: #fff;
+/// hmburger button
+$hamburger-color: #fe7f2d;
+
+// Footer
+$footer-background-color: #fcfeff;
+$footer-bottom-border: #00867b;
+
+$yellow: #f9dc5c;
+$orange: #fe7f2d;
+$grey: #373737;
+
+/* SCSS HEX */
+$mint-cream: #f4fffd;
+$naples-yellow: #f9dc5c;
+$pumpkin: #fe7f2d;
+$ebony: #545e56;
+$grey: #b4bbc4;
+$purple: #687d9e;
+$purple-d: #091d3b;
+$black: #000000;
+
+$nav_link: #fe7f2d;
+
+$gradient-contact: radial-gradient(at 62% 94%, #f9dc5c 0, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(at 33% 2%, #fe7f2d 0, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(at 17% 84%, #fe7f2d 0, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(at 23% 62%, #f9dc5c 0, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(at 98% 4%, #f9dc5c 0, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(at 83% 92%, #f9dc5c 0, hsla(0, 0%, 100%, 0) 50%),
+    radial-gradient(at 94% 32%, #fe7f2d 0, hsla(0, 0%, 100%, 0) 50%);
+
+$gradient-bfimage: radial-gradient(at 62% 94%, #f9dc5c 0, hsla(0, 0%, 100%, 0) 80%),
+    radial-gradient(at 33% 2%, #fe7f2d 0, hsla(0, 0%, 100%, 0) 80%),
+    radial-gradient(at 17% 84%, #fe7f2d 0, hsla(0, 0%, 100%, 0) 80%),
+    radial-gradient(at 23% 62%, #f9dc5c 0, hsla(0, 0%, 100%, 0) 80%),
+    radial-gradient(at 98% 4%, #f9dc5c 0, hsla(0, 0%, 100%, 0) 80%),
+    radial-gradient(at 83% 92%, #f9dc5c 0, hsla(0, 0%, 100%, 0) 80%),
+    radial-gradient(at 94% 32%, #fe7f2d 0, hsla(0, 0%, 100%, 0) 80%);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #f4fffdff, #f9dc5cff, #fe7f2dff, #545e56ff, #000000ff);
+$gradient-right: linear-gradient(90deg, #f4fffdff, #f9dc5cff, #fe7f2dff, #545e56ff, #000000ff);
+$gradient-bottom: linear-gradient(180deg, #f4fffdff, #f9dc5cff, #fe7f2dff, #545e56ff, #000000ff);
+$gradient-left: linear-gradient(270deg, #f4fffdff, #f9dc5cff, #fe7f2dff, #545e56ff, #000000ff);
+$gradient-top-right: linear-gradient(45deg, #f4fffdff, #f9dc5cff, #fe7f2dff, #545e56ff, #000000ff);
+$gradient-bottom-right: linear-gradient(135deg, #f4fffdff, #f9dc5cff, #fe7f2dff, #545e56ff, #000000ff);
+$gradient-top-left: linear-gradient(225deg, #f4fffdff, #f9dc5cff, #fe7f2dff, #545e56ff, #000000ff);
+$gradient-bottom-left: linear-gradient(315deg, #f4fffdff, #f9dc5cff, #fe7f2dff, #545e56ff, #000000ff);
+$gradient-radial: radial-gradient(#f4fffdff, #f9dc5cff, #fe7f2dff, #545e56ff, #000000ff);
+
+// ifoo style variables
+$title-color: #fe7f2d;
+$text-color: #6c6c6c;
+$hover-color: #fe7f2d;
+
+// form style variables
+$form-shadow-color: rgba(0, 0, 0, 0.05);
+
+// fields variables
+$border-size: 2px;
+$border: #efefef;
+$border-focus: #fe7f2d;
+$font-color: #000;
+$placeholder-color: #b4b4b4;
+$form-background-color: #fff;
+
+// btn varibales
+$bnt-background: #fe7f2d;
+$btn-font: #fff;
+$focus-color: #f9dc5c;
+
+// cards
+$blur: 6px;
+$blur-project: 1rem;
+$card-shadow-color: rgba(0, 0, 0, 0.05);
+$card-shadow-color-hover: #f9dc5c;
+
+$btn-filter-color: #f9dc5c;

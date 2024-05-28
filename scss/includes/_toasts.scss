@@ -1,0 +1,45 @@
+/* Toasts */
+// Success
+$toast-success: #fe7f2d;
+$toast-success-border: #f9dc5c;
+// Info
+$toast-info: #731a1e;
+$toast-info-border: #9d4044;
+// form style variables
+$shadow-color: rgba(0, 0, 0, 0.05);
+
+.messages-container {
+    position: fixed;
+    top: 84px;
+    right: 10px;
+    z-index: 99999999999;
+    max-width: 300px;
+
+    /* Main toast class */
+    .toast {
+        border-radius: 0;
+        box-shadow: none;
+
+        .tosat-body {
+            padding: 0.5rem 0.75rem;
+        }
+
+        .message-text {
+            color: #fff;
+            font-weight: 300;
+        }
+    }
+
+    /* Toast - Success */
+    .toast-success {
+        background: linear-gradient(90deg, $toast-success, $toast-success-border);
+        border: 2px solid $toast-success;
+        box-shadow: 0 0 50px 0 $shadow-color !important;
+    }
+    /* Toast - Info */
+    .toast-info {
+        background: linear-gradient(90deg, $toast-info, $toast-info-border);
+        border: 2px solid $toast-info;
+        box-shadow: 0 0 50px 0 $shadow-color !important;
+    }
+}

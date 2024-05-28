@@ -1,0 +1,166 @@
+.btn-primary {
+    width: 100px;
+    border: none;
+    border-radius: 1.5rem 1.5rem 1.5rem 0;
+    color: $btn-font;
+    background-color: $bnt-background;
+    margin-top: 1rem;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+        background-color: $bnt-background !important;
+        box-shadow: 0 0 0 0.25rem $focus-color !important;
+    }
+}
+
+.btn-contact,
+.btn-phone {
+    width: 160px;
+    border: none;
+    border-radius: 1.5rem 1.5rem 1.5rem 0;
+    color: $btn-font;
+    background-color: #000;
+    margin-top: 1rem;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+        color: #fff !important;
+        background-color: #000 !important;
+        box-shadow: 0 0 0 0.25rem #c6c6c6 !important;
+    }
+}
+
+// phone button style adjustment
+.btn-phone {
+    width: 60px;
+    border-radius: 1.5rem 1.5rem 0 1.5rem;
+    margin-right: 0.625rem;
+}
+
+.btn-filter {
+    width: 100px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(#000, 0.05);
+    border-radius: 1.5rem 1.5rem 1.5rem 0;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+        background-color: rgba($btn-filter-color, 0.25);
+        box-shadow: 0 0 0 0.25rem $btn-filter-color !important;
+    }
+}
+
+.btn-offer {
+    width: 140px;
+    border: none;
+    background-color: rgba(#000, 0.05);
+    border-radius: 1.5rem 1.5rem 1.5rem 0;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+        background-color: rgba($btn-filter-color, 0.25);
+        box-shadow: 0 0 0 0.25rem $btn-filter-color !important;
+    }
+}
+
+.btn-reset {
+    width: 100px;
+    border: none;
+    color: #fff;
+    background-color: #7d316a;
+    border-radius: 1.5rem 1.5rem 1.5rem 0;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+        color: #fff !important;
+        background-color: #7d316a !important;
+        box-shadow: 0 0 0 0.25rem #091d3b !important;
+    }
+}
+
+.btn-apply {
+    width: 100px;
+    border: none;
+    color: #fff;
+    background-color: #687d9e;
+    border-radius: 0 1.5rem 1.5rem 1.5rem;
+    margin-top: 0.5rem;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+        color: #fff !important;
+        background-color: #687d9e !important;
+        box-shadow: 0 0 0 0.25rem #091d3b !important;
+    }
+}
+
+.btn-projects {
+    font-weight: 400;
+    color: $orange;
+}
+
+.btn-back {
+    color: #6c6c6c;
+    background-color: #fff;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    border-radius: 1.5rem 1.5rem 1.5rem 0;
+    border-radius: 1.25rem 1.25rem 1.25rem 0;
+    border: none;
+    box-shadow: 0 0 0 0.35rem rgba(0, 0, 0, 0.05);
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+        box-shadow: 0 0 0 0.35rem rgba(0, 0, 0, 0.2);
+    }
+}
+
+.scroll-button {
+    outline: none;
+    z-index: 1;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible {
+        background-color: #000 !important;
+    }
+}
+
+.scroll-top {
+    width: 60px;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: #000;
+    z-index: 99999;
+    border-radius: 0;
+    border-top-left-radius: 2rem;
+    padding: 0;
+
+    i {
+        padding-left: 0.25rem;
+        font-size: 1.25rem;
+        display: inline-block;
+        color: #fff;
+    }
+}

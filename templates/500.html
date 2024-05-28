@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+<!-- browser bar title -->
+{% block extra_title %} - Error 500{% endblock %}
+<!-- main container block -->
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="error404">
+            <div class="image-container">
+                <h3>Error 500</h3>
+                <p class="lead">Odpiął nam serwer i zjada kabelki... co za gość!</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

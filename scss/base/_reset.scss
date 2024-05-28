@@ -1,0 +1,11 @@
+html,
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    width: 100%;
+    min-width: 320px !important;
+    background-color: $body-background-color;
+}
+
+main > .main-container {
+    padding: 66px 0 0 0;
+}

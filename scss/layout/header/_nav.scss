@@ -1,0 +1,95 @@
+nav {
+    background-color: #fff;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+
+    .navbar-brand {
+        height: 50px;
+        max-height: 50px;
+        width: auto;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        border-radius: 0;
+        background-color: #fff;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .nav-item {
+        padding: 0.5rem;
+
+        $in_out_time: 0.25s;
+
+        .nav-link {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            background-image: linear-gradient(to right, #f9dc5c 0%, #fe7f2d 50%, #373737 25%);
+            background-size: 200% 100%;
+            background-position: -100%;
+            display: inline-block;
+            padding: 0 !important;
+            position: relative;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all $in_out_time ease-in-out;
+
+            &:before {
+                content: "";
+                background: #fe7f2d;
+                display: block;
+                position: absolute;
+                bottom: -3px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                transition: all $in_out_time ease-in-out;
+            }
+
+            &:hover {
+                background-position: 0;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+
+    // active link style
+    .active {
+        background-image: linear-gradient(90deg, rgba(254, 127, 45, 1) 0%, rgba(254, 127, 45, 1) 0%) !important;
+    }
+
+    // three aside contact buttons style
+    i {
+        color: #000;
+
+        &:hover {
+            color: #fe7f2d;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    nav {
+        .nav-item {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .list-inline {
+            display: inline-flex;
+            justify-content: flex-end;
+        }
+    }
+}

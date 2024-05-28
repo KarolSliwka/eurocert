@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+
+    <style type="text/css">
+        html {
+            background-color: #fff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 4rem;
+        }
+
+        .info {
+            border-bottom: 1px solid #d1d1d1;
+            margin: 2rem 0 2rem 0;
+            padding-bottom: 1rem;
+        }
+
+        .info-text,
+        .info-text-small {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+
+        .info-text-small {
+            font-size: 1rem;
+        }
+
+        h1,
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fe7f2d;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: #fe7f2d;
+            margin-bottom: 1rem;
+        }
+
+        .copy-text {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: .5rem;
+        }
+
+        .message {
+            margin: 2rem 0 3rem 0;
+        }
+
+        .name-surname,
+        .email-address,
+        .subject,
+        .message-text {
+            font-weight: 300;
+            color: #000;
+            text-decoration: none !important;
+        }
+
+        .signature img {
+            width: 100%;
+            max-width: 160px;
+            margin-bottom: 1rem;
+        }
+
+        .signature-text {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    </style>
+
+    <body>
+        <div class="container my-5">
+            <section class="info">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Witaj, {{ name|title }}!</h1>
+                        <p class="lead mb-0 info-text">Dziękujemy za Twoją wiadomość.</p>
+                        <p class="lead info-text-small">Odpowiemy na nią tak szybko jak to tylko możliwe!</p>
+                    </div>
+                </div>
+            </section>
+            <section class="message">
+                <h2>Kopia wiadmości z tileswykonczenia.pl</h2>
+                <p class="lead copy-text">Imię i Nazwisko: <span class="name-surname">{{ name|title }}</span></p>
+                <p class="lead copy-text">Firma: <span class="subject">{{ company }}</span></p>
+                <p class="lead copy-text">Telefon: <span class="subject">{{ phone_number }}</span></p>
+                <p class="lead copy-text">E-mail: <span class="email-address">{{ from_email }}</span></p>
+                <p class="lead copy-text">Wiadomość: <span class="message-text">{{ message }}</span></p>
+            </section>
+            <section class="signature">
+                <p class="lead signature-text">Pozdrawiamy serdecznie,<br>
+                    <img src="http://esohosti.wwwnl1-ts106.a2hosted.com/emails-logo/tiles.png"
+                        alt="logo-tileswykoniczenia">
+                </p>
+                <p class="lead signature-text mb-1"><strong>Pracujemy w godzinach:</strong></p>
+                <p class="lead signature-text mb-1">Pon - Pt: <span>08:00 - 16:00</span></p>
+                <p class="lead signature-text mb-1"><b>www:</b>
+                    <span>
+                        <a href="https://www.tileswykonczenia.pl">tileswykonczenia.pl</a>
+                    </span>
+                </p>
+                <p class="lead signature-text mb-1"><b>kom:</b>
+                    <span>
+                        <a href="tel:+48535036392">+48 535 036 392</a>
+                    </span>
+                </p>
+            </section>
+        </div>
+    </body>
+
+</html>
